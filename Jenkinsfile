@@ -3,17 +3,22 @@ pipeline {
     stages {
       stage('One') {
         steps {
-          echo 'This is First Build'
+          echo 'This is Sonali Nikam...!!!'
         }
       }
       stage('Two') {
         steps {
-          echo 'Second build'
+          input('Do you want to proceed?')
         }
       }
       stage('Three') {
         steps {
-          echo 'Third build.....'
+          when {
+            not {
+              branch "master"
+            }
+          }
+          echo 'Hello'
         }
       }
     }
