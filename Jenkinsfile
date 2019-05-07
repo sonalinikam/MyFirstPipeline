@@ -6,5 +6,15 @@ pipeline {
           echo 'This is First Build'
         }
       }
+      stage('Two') {
+        steps {
+          echo 'Second build'
+        }
+      }
+      stage('Three') {
+        steps {
+          echo 'Third build.....'
+        }
+      }
     }
 }
